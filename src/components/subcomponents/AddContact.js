@@ -40,7 +40,7 @@ const AddContact = () => {
   return (
     <div className='ui main'>
       {empty ? (
-        <div>
+        <>
           <div className='ui red message'>Please Enter Name and Email both</div>
           <h2>Add Contact</h2>
           <form className='ui form'>
@@ -72,7 +72,7 @@ const AddContact = () => {
               Add
             </button>
           </form>
-        </div>
+        </>
       ) : (
         <div>
           <h2>Add Contact</h2>
