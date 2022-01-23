@@ -5,11 +5,11 @@ import ContactList from '../subcomponents/ContactList';
 
 const Home = () => {
   return (
-    <Fragment>
+    <div className='ui container'>
       <Header />
       <AddContact />
       <ContactList />
-    </Fragment>
+    </div>
   );
 };
 
