@@ -5,7 +5,7 @@ import axios from 'axios';
 const AddContact = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [empty, setEmpty] = useState(true);
+  const [empty, setEmpty] = useState(false);
 
   useEffect(() => {
     const timeId = setTimeout(() => {
@@ -33,6 +33,7 @@ const AddContact = () => {
         setTitle('');
         setContent('');
         window.location.reload();
+        setEmpty(false);
       } catch (error) {}
     }
   };
