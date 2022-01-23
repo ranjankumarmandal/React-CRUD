@@ -74,7 +74,7 @@ const AddContact = () => {
           </form>
         </>
       ) : (
-        <div>
+        <>
           <h2>Add Contact</h2>
           <form className='ui form'>
             <div className='field'>
@@ -105,7 +105,7 @@ const AddContact = () => {
               Add
             </button>
           </form>
-        </div>
+        </>
       )}
     </div>
   );
