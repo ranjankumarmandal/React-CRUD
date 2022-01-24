@@ -12,6 +12,7 @@ const ContactCard = ({ contact, handleDelete }) => {
       <i
         className='trash alternate outline icon'
         style={{ color: 'red', marginTop: '7px' }}
+        onClick={() => handleDelete(contact.id)}
       ></i>
     </div>
   );
