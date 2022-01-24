@@ -17,6 +17,18 @@ const ContactList = () => {
     }
   }, []);
 
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(
+        `https://ranjan-json-server.herokuapp.com/posts/${id}`
+      );
+      const newContact = contacts.filter((contact) => id !== contact.id);
+      setContacts(newContact);
+    } catch (error) {
+      console.log('something went wrong while deleting');
+    }
+  };
+
   return (
     <div className='ui celled list'>
       {contacts.map((contact) => (
