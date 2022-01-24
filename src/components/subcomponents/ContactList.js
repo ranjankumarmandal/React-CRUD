@@ -20,7 +20,11 @@ const ContactList = () => {
   return (
     <div className='ui celled list'>
       {contacts.map((contact) => (
-        <ContactCard key={contact.id} contact={contact} />
+        <ContactCard
+          key={contact.id}
+          contact={contact}
+          handleDelete={handleDelete}
+        />
       ))}
     </div>
   );
