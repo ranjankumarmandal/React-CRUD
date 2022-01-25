@@ -36,6 +36,7 @@ const ContactList = () => {
           key={contact.id}
           contact={contact}
           handleDelete={handleDelete}
+          handleEdit={handleEdit}
         />
       ))}
     </div>
