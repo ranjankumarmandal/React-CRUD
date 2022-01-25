@@ -7,6 +7,12 @@
   padding: 10px;
 }
 
+.last {
+  justify-content: end;
+  padding: 5px;
+  background-color: #ff9;
+}
+
 .ui.search input {
   width: 100%;
   border-radius: 0 !important;
