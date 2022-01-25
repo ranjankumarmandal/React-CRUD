@@ -29,8 +29,20 @@ const ContactList = () => {
     }
   };
 
-  const handleEdit = () => {
+  const handleEdit = (id) => {
     console.log('edit button clicked');
+    let person = prompt('Please enter your name:', '');
+    let email = prompt('Please enter your email:', '');
+    console.log(person, email);
+    try {
+      axios.put(`https://ranjan-json-server.herokuapp.com/posts/${id}`, {
+        id,
+        title: person,
+        content: email,
+      });
+    } catch (error) {
+      console.log('something went wrong while updating');
+    }
   };
 
   return (
