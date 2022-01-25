@@ -31,15 +31,21 @@ const ContactList = () => {
 
   const handleEdit = async (id) => {
     console.log('edit button clicked');
-    let person = prompt('Please enter your name:', '');
-    let email = prompt('Please enter your email:', '');
-    console.log(person, email);
     try {
+      let person = prompt('Please enter your name:', '');
+      let email = prompt('Please enter your email:', '');
+      console.log(person, email);
+
       await axios.put(`https://ranjan-json-server.herokuapp.com/posts/${id}`, {
         id,
         title: person,
         content: email,
       });
+
+      let updatedContact = contacts.filter(
+        (contact) => person !== contact.name
+      );
+      setContacts(updatedContact);
     } catch (error) {
       console.log('something went wrong while updating');
     }
