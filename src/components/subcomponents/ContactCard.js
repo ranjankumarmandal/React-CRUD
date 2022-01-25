@@ -18,6 +18,7 @@ const ContactCard = ({ contact, handleDelete }) => {
       <i
         className='edit alternate outline icon'
         style={{ color: 'blue', marginTop: '7px', marginRight: '10px' }}
+        onClick={() => handleEdit(contact.id)}
       ></i>
     </div>
   );
