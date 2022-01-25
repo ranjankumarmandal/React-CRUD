@@ -9,8 +9,17 @@
 
 .last {
   justify-content: end;
-  padding: 5px;
+  padding: 15px;
   background-color: #ff9;
+}
+
+.last:hover {
+  cursor: pointer;
+}
+
+.last a {
+  text-decoration: none;
+  color: black;
 }
 
 .ui.search input {
