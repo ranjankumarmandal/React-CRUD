@@ -29,13 +29,13 @@ const ContactList = () => {
     }
   };
 
-  const handleEdit = (id) => {
+  const handleEdit = async (id) => {
     console.log('edit button clicked');
     let person = prompt('Please enter your name:', '');
     let email = prompt('Please enter your email:', '');
     console.log(person, email);
     try {
-      axios.put(`https://ranjan-json-server.herokuapp.com/posts/${id}`, {
+      await axios.put(`https://ranjan-json-server.herokuapp.com/posts/${id}`, {
         id,
         title: person,
         content: email,
