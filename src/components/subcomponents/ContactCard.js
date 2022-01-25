@@ -1,7 +1,7 @@
 import React from 'react';
 import user from '../../images/user.png';
 
-const ContactCard = ({ contact, handleDelete }) => {
+const ContactCard = ({ contact, handleDelete, handleEdit }) => {
   return (
     <div className='item'>
       <img src={user} alt='user' className='ui avatar image' />
