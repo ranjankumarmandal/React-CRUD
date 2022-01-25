@@ -34,17 +34,19 @@ const ContactList = () => {
     try {
       let person = prompt('Please enter your name:', '');
       let email = prompt('Please enter your email:', '');
-      console.log(person, email);
 
-      await axios.put(`https://ranjan-json-server.herokuapp.com/posts/${id}`, {
-        id,
-        title: person,
-        content: email,
-      });
-
-      let updatedContact = contacts.filter(
-        (contact) => person !== contact.name
+      let newC = contacts.filter((contact) => id !== contact.id);
+      let res = await axios.put(
+        `https://ranjan-json-server.herokuapp.com/posts/${id}`,
+        {
+          id,
+          title: person,
+          content: email,
+        }
       );
+
+      let updatedContact = [...newC, res.data];
+      console.log(updatedContact);
       setContacts(updatedContact);
     } catch (error) {
       console.log('something went wrong while updating');
