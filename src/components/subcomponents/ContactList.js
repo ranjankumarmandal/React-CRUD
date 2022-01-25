@@ -29,6 +29,10 @@ const ContactList = () => {
     }
   };
 
+  const handleEdit = () => {
+    console.log('edit button clicked');
+  };
+
   return (
     <div className='ui celled list'>
       {contacts.map((contact) => (
